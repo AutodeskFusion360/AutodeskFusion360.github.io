@@ -1,68 +1,355 @@
 <!DOCTYPE html>
+<!--changes-->
 <html>
-
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="description" content="Autodesk Fusion 360 API : ">
-
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
+<head>
     <title>Autodesk Fusion 360 API</title>
-  </head>
+    <meta charset="utf-8">
+    <meta content="chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="AutodeskFusion360.GitHub.io : The entry point of Autodesk Fusion 360 API" name="description">
+    <!--bootstrap stylesheet-->
+    <!-- icons-->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <!--owl carousel-->
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <![endif]-->
+    <link href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css" rel="stylesheet">
+    <link href="css/ionicons.css" rel="stylesheet">
+    <link href="css/maria-theme-checkbox.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/maria-base-theme.css" rel="stylesheet">
+    <link href="css/maria-theme.css" rel="stylesheet">
+    <link href="css/open-sans.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+    <link href="http://www.fuelcdn.com/fuelux/3.6.3/css/fuelux.min.css" rel="stylesheet">
+</head>
+<body data-spy="scroll" data-target="#nav-parent" class="fuelux">
 
-  <body>
-
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/AutodeskFusion360">View on GitHub</a>
-
-          <h1 id="project_title">Autodesk Fusion 360 API</h1>
-          <h2 id="project_tagline"></h2>
-
-        </header>
+<!-- NAVBAR -->
+<div class="bs-docs-section clearfix" id="navbar">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="bs-component">
+                <div class="navbar navbar-default app-navbar">
+                    <div class="container app-container">
+                        <div class="navbar-header">
+                            <a class="navbar-brand" href="http://www.autodesk.com/"><img width="160px;"
+                                                                                          src="img/Autodesk_logo.png"
+                                                                                          style="padding: 20px;"></a>
+                        </div>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="https://github.com/AutodeskFusion360">View on GitHub<i
+                                    class="fa fa-github-alt fa-fw"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+</div>
+<!-- END NAVBAR -->
 
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h3>
-<a id="welcome-to-the-autodesk-fusion-360-api-github-site" class="anchor" href="#welcome-to-the-autodesk-fusion-360-api-github-site" aria-hidden="true"><span class="octicon octicon-link"></span></a>Welcome to the Autodesk Fusion 360 API GitHub Site</h3>
-
-<p>It's here that you can find links to get more information about developing scripts and add-ins for Fusion. There are also  many repositories of sample code written by Autodesk and also links to many community repositories where other developers are sharing their Fusion programs.</p>
-
-<h3>
-<a id="getting-started-with-fusions-api" class="anchor" href="#getting-started-with-fusions-api" aria-hidden="true"><span class="octicon octicon-link"></span></a>Getting Started with Fusion's API</h3>
-
-<p>For a quick overview of the API you can view a recording of a recent webcast.</p>
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/g0xWqLen7gI" frameborder="0" allowfullscreen></iframe>
-
-<p>You can learn more details about the API by reading the <a href="http://fusion360.autodesk.com/resources/akn/view/NINVFUS/ENU/?guid=GUID-DE5B70A6-AA7D-439D-8284-2F0382AB6C90">Fusion API documentation</a>.</p>
-<h3>
-<a id="Autodesk Sample Scripts and Add-Ins" class="anchor" href="#samples-scripts-and-addins" aria-hidden="true"><span class="octicon octicon-link"></span></a>Autodesk Sample Scripts and Add-Ins</h3>
-
-<p><a href="https://github.com/AutodeskFusion360/ShowHideSketches_JS">Show/Hide Sketches</a></p>
-
-<p></p><a href="https://github.com/AutodeskFusion360">Complete List</a></p>
-
-<h3>
-<a id="Other Sample Scripts and Add-Ins" class="anchor" href="#other-samples-scripts-and-addins" aria-hidden="true"><span class="octicon octicon-link"></span></a>Other Sample Scripts and Add-Ins</h3>
-
-<p><a href="https://github.com/hanskellner/Fusion360Voronoi">Voronoi sketch generator</a></p>
-
-<p><a href="https://github.com/hanskellner/Fusion360ParaParam">Drive user parameter</a></p>
-
-<p><a href="https://github.com/hanskellner/Fusion360Image2Surface">Generate surfaces from an image</a></p>
-      </section>
+<!-- HEADER -->
+<div class="clearfix">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="page-header content-header app-content-header api-detail-header view-and-data-api" id="title">
+                <div class="container app-container">
+                    <div class="col-xs-12 col-sm-6 col-md-9 col-lg-9 app-title-container">
+                        <h1 id="view-and-data-title">Autodesk Fusion 360 API</h1>
+                    </div>
+                    <!--<p>Embedding vibrant 3D graphics in a Web Browser,
+                        Support for almost 100 formats,
+                        fast streaming large 2D and 3D models </p>-->
+                    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 app-button-container">
+                        <p class="bs-component">
+                            <!--
+                            <a href="https://developer.autodesk.com/" class="btn app-btn app-btn-lg app-btn-primary create-app-btn pull-right">Create an App<span class="bg-icon size-21"><i class="icon ion-chevron-right"></i></span></a>
+-->
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+</div>
+<!-- END HEADER --->
 
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
-      </footer>
+<!-- MAIN CONTENT -->
+<div class="content-form app-content-form clearfix">
+    <div class="container app-container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
+                <div id="nav-parent" class="page-header hidden-xs">
+                    <div data-spy="affix" data-offset-top="200"
+                         class="panel panel-default app-panel-default app-sidenav-panel">
+                        <div class="navbar-collapse collapse navbar-responsive-collapse panel-body app-panel-body app-sidenav-body"
+                             role="complementary">
+                            <ul class="nav nav-pills nav-stacked app-sidenav">
+                                <li role="presentation" class="active"><a href="#section_welcome" class="first-child">Welcome</a></li>
+                                <li role="presentation"><a href="#section_getting-started" class="first-child">Getting Started</a></li>
+                                <li role="presentation"><a href="#section_autodesk-samples" class="first-child">Autodesk Samples</a></li>
+                                <li role="presentation"><a href="#section_other-samples" class="first-child">Other Samples</a></li>
+                                <li role="presentation"><a href="#section_support" class="first-child">Support</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div id="nav-parent-mobile" class="page-header hidden-sm hidden-md hidden-lg">
+                    <div data-spy="affix" data-offset-top="150"
+                         class="panel panel-default app-panel-default app-sidenav-panel">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse"
+                                data-target=".navbar-responsive-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <div class="navbar-collapse collapse navbar-responsive-collapse panel-body app-panel-body app-sidenav-body"
+                             role="complementary">
+                            <div class="col-lg-12">
+                                <ul class="nav nav-pills nav-stacked app-sidenav">
+                                    <li role="presentation" class="active"><a href="#section_welcome"
+                                                                              data-toggle="collapse"
+                                                                              data-target=".navbar-responsive-collapse">Welcome</a>
+                                    </li>
+                                    <li role="presentation"><a href="#section_getting-started" data-toggle="collapse"
+                                                               data-target=".navbar-responsive-collapse">Getting Started</a>
+                                    </li>
+                                    <li role="presentation"><a href="#section_autodesk-samples" data-toggle="collapse"
+                                                               data-target=".navbar-responsive-collapse">Autodesk Samples</a>
+                                    </li>
+                                    <li role="presentation"><a href="#section_other-samples" data-toggle="collapse"
+                                                               data-target=".navbar-responsive-collapse">Other
+                                        Samples</a></li>
+                                    <li role="presentation"><a href="#section_support" data-toggle="collapse"
+                                                               data-target=".navbar-responsive-collapse">Support</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-8 col-md-9 col-lg-9">
+                <div class="page-header">
+                    <div class="panel panel-default app-panel-default">
+                        <div class="panel-body app-panel-body app-api-doc">
+
+                            <!-- start #section_welcome -->
+                            <div class="app-api-section" id="section_welcome">
+                                <div class="app-api-section-heading">
+                                    <h2 class="app-api-section-title first-child">Welcome to the Autodesk Fusion 360 API
+                                        GitHub Site</h2>
+                                </div>
+                                <p>It's here that you can find links to get more information about developing scripts and add-ins for Fusion.
+                                    There are also many repositories of sample code written by Autodesk and also links to many community repositories where
+                                    other developers are sharing their Fusion programs.
+                                </p>
+
+                            </div>
+                            <!-- end #section_welcome -->
+
+                            <!-- start #section_gettingstarted -->
+                            <div class="app-api-section" id="section_getting-started">
+                                <div class="app-api-section-heading">
+                                    <h2 class="app-api-section-title first-child">Getting Started with Fusion's API</h2>
+                                </div>
+                                <p>For a quick overview of the API you can view a recording of a recent webcast.
+                                </p>
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/g0xWqLen7gI" frameborder="0" allowfullscreen></iframe>
+                                <p>You can learn more details about the API by reading the <a href="http://fusion360.autodesk.com/resources/akn/view/NINVFUS/ENU/?guid=GUID-DE5B70A6-AA7D-439D-8284-2F0382AB6C90">Fusion API documentation</a>.
+                                </p>
+
+                            </div>
+                            <!-- end #section_gettingstarted -->
+
+                            <!-- start #section_autodesksamples -->
+                            <div class="app-api-section" id="section_autodesk-samples">
+                                <div class="app-api-section-heading">
+                                    <h2 class="app-api-section-title first-child">Autodesk Sample Scripts and Add-Ins</h2>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-10 col-md-offset-1">
+                                        <div class="list-group">
+                                            <a href="https://github.com/AutodeskFusion360/ShowHideSketches_JS"
+                                               class="list-group-item">
+                                                <i class="fa fa-file-code-o fa-2x pull-left"></i>
+                                                Show/Hide Sketches<br>
+                                                Shows or hides all sketches in the model - written in JavaScript.
+                                            </a>
+                                            <a href="https://github.com/AutodeskFusion360/DXFSplineToPolyline_python"
+                                               class="list-group-item">
+                                                <i class="fa fa-file-code-o fa-2x pull-left"></i>
+                                                DXF Spline To Polyline<br>
+                                                An Add-In with a command that can export DXF of sketch where splines are converted to polylines.
+                                            </a>
+                                            <a href="https://github.com/AutodeskFusion360/Comparer_Python"
+                                               class="list-group-item">
+                                                <i class="fa fa-file-code-o fa-2x pull-left"></i>
+                                                Comparer<br>
+                                                Add-In that lets the user save a snapshot of the current model then compare it to a later state - written in Python.
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end #section_autodesksamples -->
+
+                            <!-- start #section_other-samples -->
+                            <div class="app-api-section" id="section_other-samples" >
+                                <div class="app-api-section-heading">
+                                    <h2 class="app-api-section-title first-child">Other Sample Scripts and Add-Ins</h2>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-10 col-md-offset-1">
+                                        <div class="list-group">
+                                            <a href="https://github.com/hanskellner/Fusion360Voronoi"
+                                               class="list-group-item">
+                                                <i class="fa fa-file-code-o fa-2x pull-left"></i>
+                                                Voronoi sketch generator<br>
+                                                This script is used for generating voronoi sketches in Autodesk Fusion 360.
+                                                Once created, these sketches may then be used for creating or modifying models.
+                                            </a>
+                                            <a href="https://github.com/hanskellner/Fusion360ParaParam"
+                                               class="list-group-item">
+                                                <i class="fa fa-file-code-o fa-2x pull-left"></i>
+                                                Drive user parameter<br>
+                                                This script is used for parametrically modifying a user parameter.
+                                                For each iteration an operation may be performed such as exporting to STL.
+                                                This is very useful for automating variations of a design and exporting those variations.
+                                            </a>
+                                            <a href="https://github.com/hanskellner/Fusion360Image2Surface"
+                                               class="list-group-item">
+                                                <i class="fa fa-file-code-o fa-2x pull-left"></i>
+                                                Generate surfaces from an image<br>
+                                                This is an Autodesk Fusion 360 script that's used for generating surfaces from images.
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end #section_other-samples -->
+
+                            <!-- start #section_support -->
+                            <div class="app-api-section" id="section_support">
+                                <div class="app-api-section-heading">
+                                    <h2 class="app-api-section-title first-child">Support</h2>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4" align="center">
+                                        <a href="http://fusion360.autodesk.com/resources/akn/view/NINVFUS/ENU/?guid=GUID-DE5B70A6-AA7D-439D-8284-2F0382AB6C90">
+                                            <i class="fa fa-file-text-o fa-5x"></i>
+                                            <br />Documentation
+                                        </a>
+
+                                        <p class="text-left">The documentation is always the first place you should go
+                                            when you have problems or it's unclear how to use the API.</p>
+                                    </div>
+                                    <div class="col-md-4" align="center">
+                                        <a href="http://forums.autodesk.com/t5/api-and-scripts/bd-p/22">
+                                            <i class="fa fa-users fa-5x"></i>
+                                            <br />Fusion 360 API Forum</a>
+
+                                        <p class="text-left">Need help? Search on forums for similar questions and
+                                            solutions, or ask your question in a new thread.</p>
+                                    </div>
+                                    <div class="col-md-4" align="center">
+                                        <a href="http://modthemachine.typepad.com/">
+                                            <i class="fa fa-rss fa-5x"></i>
+                                            <br />ModTheMachine Blog</a>
+
+                                        <p class="text-left">We share our solutions, tips and our learning experiences
+                                            on the "ModTheMachine Blog". Be sure to check it out.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end #section_support -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-  </body>
+</div>
+<!--place holder for AutoCAD IO-->
+<!--<div class="page-header" id="title">
+    <div class="container">
+        <h1>AutoCAD I/O API</h1>
+        <h2>AutoCAD as a Service</h2>
+    </div>
+    </div>-->
+<!-- FOOTER  -->
+<div class="clearfix">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="page-footer">
+                <div class="container app-container">
+                    <p>&#169; Copyright 2015 Autodesk. All rights reserved. </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- END FOOTER -->
+<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="http://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+<!--owl carousel-->
+<script src="js/owl.carousel.min.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+<script src="http://www.fuelcdn.com/fuelux/3.6.3/js/fuelux.min.js"></script>
+
+<script>
+    $(function () {
+        $("#tabs").tabs();
+    });
+</script>
+
+<script>
+    $(function () {
+        $("#tabs").tabs();
+    });
+    $(document).ready(function () {
+        $('.owl-carousel').owlCarousel({
+            autoPlay: 3000, //Set AutoPlay to 3 seconds
+
+            items: 4,
+            itemsDesktop: [1199, 3],
+            itemsDesktopSmall: [979, 3]
+        });
+
+        //loader stuff
+        var iFrame1Loaded = false;
+        var iFrame2Loaded = false;
+
+        $('#loader').loader();
+
+        function deleteLoader() {
+            setTimeout(function () {
+                $('#loader').loader('destroy');
+                var div = document.getElementById("loaderBackground");
+                div.parentElement.removeChild(div);
+            }, 2000);
+        }
+
+        document.getElementById("iFrame1").onload = function () {
+            iFrame1Loaded = true;
+            if (iFrame2Loaded) deleteLoader();
+        };
+
+        document.getElementById("iFrame2").onload = function () {
+            iFrame2Loaded = true;
+            if (iFrame1Loaded) deleteLoader();
+        };
+    });
+</script>
+
+
+</body>
 </html>
