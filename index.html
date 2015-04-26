@@ -27,8 +27,22 @@
     <link href="css/open-sans.css" rel="stylesheet">
     <link href="css/custom.css" rel="stylesheet">
     <link href="http://www.fuelcdn.com/fuelux/3.6.3/css/fuelux.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="favicon.ico">
 </head>
 <body data-spy="scroll" data-target="#nav-parent" class="fuelux">
+
+<!--
+Notes from Adam Nagy:
+Some issues with the navigation bar changing width on scrolling down and flows into the main content:
+- http://stackoverflow.com/questions/18683303/bootstrap-3-0-affix-with-list-changes-width
+- https://github.com/twbs/bootstrap/issues/6350
+
+Using Affix helper:
+- http://www.sitepoint.com/understanding-bootstraps-affix-scrollspy-plugins/
+
+The solution I used was this:
+- http://stackoverflow.com/questions/12536354/bootstrap-affix-plugin-with-fluid-layout
+-->
 
 <!-- NAVBAR -->
 <div class="bs-docs-section clearfix" id="navbar">
@@ -86,7 +100,7 @@
         <div class="row">
             <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
                 <div id="nav-parent" class="page-header hidden-xs">
-                    <div data-spy="affix" data-offset-top="200"
+                    <div data-clampedwidth="#nav-parent" data-spy="affix" data-offset-top="200"
                          class="panel panel-default app-panel-default app-sidenav-panel">
                         <div class="navbar-collapse collapse navbar-responsive-collapse panel-body app-panel-body app-sidenav-body"
                              role="complementary">
@@ -316,12 +330,30 @@
         $("#tabs").tabs();
     });
     $(document).ready(function () {
+        /*
         $('.owl-carousel').owlCarousel({
             autoPlay: 3000, //Set AutoPlay to 3 seconds
 
             items: 4,
             itemsDesktop: [1199, 3],
             itemsDesktopSmall: [979, 3]
+        });
+        */
+
+        // Adam added it
+        $('[data-clampedwidth]').each(function () {
+            var elem = $(this);
+            var parentPanel = elem.data('clampedwidth');
+            var resizeFn = function () {
+                var sideBarNavWidth = $(parentPanel).width()
+                        - parseInt(elem.css('paddingLeft')) - parseInt(elem.css('paddingRight'))
+                        - parseInt(elem.css('marginLeft')) - parseInt(elem.css('marginRight'))
+                        - parseInt(elem.css('borderLeftWidth')) - parseInt(elem.css('borderRightWidth'));
+                elem.css('width', sideBarNavWidth);
+            };
+
+            resizeFn();
+            $(window).resize(resizeFn);
         });
 
         //loader stuff
