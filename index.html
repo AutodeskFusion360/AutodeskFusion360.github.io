@@ -115,7 +115,7 @@ The solution I used was this:
                     </div>
                 </div>
                 <div id="nav-parent-mobile" class="page-header hidden-sm hidden-md hidden-lg">
-                    <div data-spy="affix" data-offset-top="150"
+                    <div data-clampedwidth="#nav-parent-mobile" data-spy="affix" data-offset-top="150"
                          class="panel panel-default app-panel-default app-sidenav-panel">
                         <button type="button" class="navbar-toggle" data-toggle="collapse"
                                 data-target=".navbar-responsive-collapse">
@@ -175,10 +175,11 @@ The solution I used was this:
                                 </div>
                                 <p>For a quick overview of the API you can view a recording of a recent webcast.
                                 </p>
-                                <iframe width="560" height="315" src="https://www.youtube.com/embed/g0xWqLen7gI" frameborder="0" allowfullscreen></iframe>
+                                <div style="position: relative; width: 100%; height: 0; padding-bottom: 51%;">
+                                    <iframe style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;" src="https://www.youtube.com/embed/g0xWqLen7gI" frameborder="0" allowfullscreen></iframe>
+                                </div>
                                 <p>You can learn more details about the API by reading the <a href="http://fusion360.autodesk.com/resources/akn/view/NINVFUS/ENU/?guid=GUID-DE5B70A6-AA7D-439D-8284-2F0382AB6C90">Fusion API documentation</a>.
                                 </p>
-
                             </div>
                             <!-- end #section_gettingstarted -->
 
