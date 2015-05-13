@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>How to install sample Add-Ins and Scripts</title>
+    <link rel="shortcut icon" href="favicon.ico">
+</head>
+<body>
+<h1>How to install sample <strong>Add-Ins</strong> and <strong>Scripts</strong></h1>
+<p>
+    The <a href="https://github.com/AutodeskFusion360">Fusion 360 GitHub</a> account contains many samples. Each sample's readme mentions it if it's a <strong>Script</strong> or an <strong>Add-In</strong>. <br />
+    More info on <strong>Add-Ins and Scripts</strong> can be found in <a href="http://help.autodesk.com/cloudhelp/ENU/Fusion-360-API/files/AddInOverview.htm">this</a> topic of the
+    <a href="http://fusion360.autodesk.com/resources/">Fusion 360 Online Help</a>. <br />
+    Depending on whether the sample is an <strong>Add-In</strong> or a <strong>Script</strong> it needs to be placed under a different folder on the system:
+    <ul>
+        <li><strong>Windows</strong>:<br />
+            <ul>
+                <li><strong>Script</strong>: %appdata%\Autodesk\Autodesk Fusion 360\API\<strong>Scripts</strong></li>
+                <li><strong>Add-In</strong>: %appdata%\Autodesk\Autodesk Fusion 360\API\<strong>AddIns</strong></li>
+                <br />
+            </ul>
+        </li>
+        <li><strong>Mac OS</strong>:
+            <ul>
+                <li><strong>Script</strong>: ~/Library/Application Support/Autodesk/Autodesk Fusion 360/API/<strong>Scripts</strong></li>
+                <li><strong>Add-In</strong>: ~/Library/Application Support/Autodesk/Autodesk Fusion 360/API/<strong>AddIns</strong></li>
+            </ul>
+        </li>
+    </ul>
+</p>
+
+<p>
+    Inside one of the above listed folders you need to create a folder that will include all the files of the <strong>Add-In or Script</strong>. <br />
+    The name of that folder and the <strong>Add-In/Script</strong> file (*.<strong>js</strong> or *.<strong>py</strong>) and
+    the manifest file (*.<strong>manifest</strong>) it contains, they all need to be the same. <br />
+    E.g. in case of the <a href="https://github.com/AutodeskFusion360/ParameterIO_Python"><strong>ParameterIO_Python</strong></a> sample,
+    which is an <strong>Add-In</strong>, the script file and the manifest file are named <strong>ParameterIO_Python</strong>, therefore you should create a <strong>ParameterIO_Python</strong>
+    folder under the appropriate <strong>Fusion 360</strong> folder:
+    <ul>
+        <li><strong>Windows</strong>:<br />
+            <img src="images\installation\ParameterIO_Python_Windows.png" width="308" height="254" />
+            <br />&nbsp;
+        </li>
+        <li><strong>Mac OS</strong>:<br />
+            <img src="images\installation\ParameterIO_Python_MacOS.png" width="438" height="242"/>
+        </li>
+    </ul>
+</p>
+
+<p>
+    Once you restart <strong>Fusion</strong> the <strong>Add-In</strong> or <strong>Script</strong> will be ready to use and shows up in the <strong>Scripts and Add-Ins</strong> dialog:
+</p>
+<p>
+    <img src="images\installation\ScriptsAndAddIns.png" width="400" height="315" />
+</p>
+
+
+</body>
+</html>
