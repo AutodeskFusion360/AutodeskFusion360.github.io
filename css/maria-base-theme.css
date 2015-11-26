@@ -894,10 +894,15 @@ header{
   background-size: cover;
 }
 .page-header.api-detail-header.view-and-data-api{
-	background: url("../img/Banner_ApiDetail_2x.png") transparent;
+/*	background: url("../img/Banner_ApiDetail_2x.png") transparent;
 	position: relative;
     background-size: cover;
-	opacity: .85;
+	opacity: .85;*/
+  background-color: transparent;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  border: 0px;
 }
 .page-header.api-detail-header.autocad-api{
 	background: url("../img/Banner_AutoCADDetail.png") transparent;
