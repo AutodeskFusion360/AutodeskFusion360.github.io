@@ -28,6 +28,9 @@
     <link href="css/custom.css" rel="stylesheet">
     <link href="http://www.fuelcdn.com/fuelux/3.6.3/css/fuelux.min.css" rel="stylesheet">
     <link rel="shortcut icon" href="favicon.ico">
+
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
 </head>
 <body data-spy="scroll" data-target="#nav-parent" class="fuelux">
 
@@ -70,8 +73,12 @@ The solution I used was this:
 
 <!-- HEADER -->
 <div class="clearfix">
-    <div class="row">
-        <div class="col-lg-12">
+    <div class="row fullscreen-scroller">
+        <div class="col-lg-12 animation-container">
+            <div class="output">
+                <script src="js/fss.js"></script>
+                <script src="js/background-animation.js"></script>
+            </div>
             <div class="page-header content-header app-content-header api-detail-header view-and-data-api" id="title">
                 <div class="container app-container">
                     <div class="col-xs-12 col-sm-6 col-md-9 col-lg-9 app-title-container">
@@ -410,24 +417,17 @@ The solution I used was this:
     </div>
 </div>
 <!-- END FOOTER -->
-<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
-<script src="http://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+
 <!--owl carousel-->
 <script src="js/owl.carousel.min.js"></script>
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
 <script src="http://www.fuelcdn.com/fuelux/3.6.3/js/fuelux.min.js"></script>
 
-<script>
-    $(function () {
-        $("#tabs").tabs();
-    });
-</script>
+
 
 <script>
-    $(function () {
-        $("#tabs").tabs();
-    });
+  
     $(document).ready(function () {
         /*
         $('.owl-carousel').owlCarousel({
@@ -455,29 +455,7 @@ The solution I used was this:
             $(window).resize(resizeFn);
         });
 
-        //loader stuff
-        var iFrame1Loaded = false;
-        var iFrame2Loaded = false;
-
-        $('#loader').loader();
-
-        function deleteLoader() {
-            setTimeout(function () {
-                $('#loader').loader('destroy');
-                var div = document.getElementById("loaderBackground");
-                div.parentElement.removeChild(div);
-            }, 2000);
-        }
-
-        document.getElementById("iFrame1").onload = function () {
-            iFrame1Loaded = true;
-            if (iFrame2Loaded) deleteLoader();
-        };
-
-        document.getElementById("iFrame2").onload = function () {
-            iFrame2Loaded = true;
-            if (iFrame1Loaded) deleteLoader();
-        };
+     
     });
 </script>
 
