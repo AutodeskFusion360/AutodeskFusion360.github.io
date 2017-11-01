@@ -11,12 +11,14 @@
     The <a href="https://github.com/AutodeskFusion360">Fusion 360 GitHub</a> account contains many samples. Each sample's readme mentions it if it's a <strong>Script</strong> or an <strong>Add-In</strong>. <br />
     More info on <strong>Add-Ins and Scripts</strong> can be found in <a href="http://help.autodesk.com/cloudhelp/ENU/Fusion-360-API/files/AddInOverview.htm">this</a> topic of the
     <a href="http://fusion360.autodesk.com/resources/">Fusion 360 Online Help</a>. <br />
-    Depending on whether the sample is an <strong>Add-In</strong> or a <strong>Script</strong> it needs to be placed under a different folder on the system:
+    Depending on whether the sample is an <strong>Add-In</strong> or a <strong>Script</strong> it needs to be placed under a different folder on the system. <br />
+    The <strong>Script</strong> or <strong>Add-In</strong> can also be distributed in a <strong>bundle</strong> package if it was prepared for the <strong>Fusion 360 App Store</strong>, in which case the package will have a <strong>.bundle</strong> extension.
     <ul>
         <li><strong>Windows</strong> (web install):
             <ul>
                 <li><strong>Script</strong>: %appdata%\Autodesk\Autodesk Fusion 360\API\<strong>Scripts</strong></li>
                 <li><strong>Add-In</strong>: %appdata%\Autodesk\Autodesk Fusion 360\API\<strong>AddIns</strong></li>
+                <li><strong>Bundle</strong>: %appdata%\Autodesk\<strong>ApplicationPlugins</strong></li>
             </ul>
         </li>
         <br />
@@ -24,6 +26,7 @@
             <ul>
                 <li><strong>Script</strong>: ~/Library/Application Support/Autodesk/Autodesk Fusion 360/API/<strong>Scripts</strong></li>
                 <li><strong>Add-In</strong>: ~/Library/Application Support/Autodesk/Autodesk Fusion 360/API/<strong>AddIns</strong></li>
+                <li><strong>Bundle</strong>: ~/Library/Application Support/Autodesk/<strong>ApplicationPlugins</strong></li>
             </ul>
         </li>
         <br />
@@ -31,6 +34,7 @@
             <ul>
                 <li><strong>Script</strong>: ~/Library/Containers/com.autodesk.mas.fusion360/Data/Library/Application Support/Autodesk/Autodesk Fusion 360/API/<strong>Scripts</strong></li>
                 <li><strong>Add-In</strong>: ~/Library/Containers/com.autodesk.mas.fusion360/Data/Library/Application Support/Autodesk/Autodesk Fusion 360/API/<strong>AddIns</strong></li>
+                <li><strong>Bundle</strong>: ~/Library/Containers/com.autodesk.mas.fusion360/Data/Library/Application Support/Autodesk/<strong>ApplicationPlugins</strong></li>
             </ul>
         </li>
     </ul>
